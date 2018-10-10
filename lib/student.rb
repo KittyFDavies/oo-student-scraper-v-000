@@ -5,7 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    student.send(:name, student_hash[:name])
+    @name = student_hash[:name]
     @location = student_hash[:location]
     @@all << self
   end
@@ -17,7 +17,7 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    #binding.pry
+    binding.pry
   end
 
   def self.all
