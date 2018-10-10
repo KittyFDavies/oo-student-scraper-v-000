@@ -34,6 +34,10 @@ class Scraper
     end
     hash_ary_single[:bio] = doc.css(".details-container .bio-block .bio-content .description-holder p").text
     hash_ary_single[:profile_quote] = doc.css(".vitals-container .vitals-text-container .profile-quote").text
+    end  
+    bio = doc.css(".details-container .bio-block .bio-content .description-holder p").text
+    quote = doc.css(".vitals-container .vitals-text-container .profile-quote").text
+    hash_ary_single = {:twitter => icons[0].text, :linkedin => icons[1].text, :github => icons[2].text, :blog => icons[3].text, :bio => bio, :profile_quote => quote}
     hash_ary_single
   end
 
